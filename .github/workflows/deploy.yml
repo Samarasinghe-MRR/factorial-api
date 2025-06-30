@@ -26,7 +26,7 @@
             host: ${{ secrets.GCP_HOST }}
             username: ${{ secrets.GCP_USER }}
             key: ${{ secrets.SSH_PRIVATE_KEY }}
-            scripts: |
+            script: |
               sudo systemctl stop factorial.service
               cp target/factorial-0.0.1-SNAPSHOT.jar /opt/factorial/
               sudo systemctl restart factorial.service
